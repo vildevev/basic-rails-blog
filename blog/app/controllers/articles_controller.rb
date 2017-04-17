@@ -3,5 +3,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-  end 
+    render plain: params[:article].inspect 
+  end
 end

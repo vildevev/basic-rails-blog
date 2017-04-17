@@ -14,9 +14,12 @@ class ArticlesController < ApplicationController
       redirect_to @article
     else
       render 'new'
-    end 
+    end
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
 
   def show
     @article = Article.find(params[:id])
